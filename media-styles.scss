@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css?family=Amiri|Lato');
+
+
+/* Mixins */
+
+@mixin wd-content-box($img-url) {
+    width: 100%;
+    height: 300px;
+    background-image: url($img-url);
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center;
+    display: none;
+}
+
+
+/* Variables */
+
+$serif: 'Amiri',
+serif;
+$sans-serif: 'Lato',
+sans-serif;
+$starter-pink: #F1ECF8;
+$middle-pink: #C2B2DF;
+$end-purple: #6D6873;
+$dark-grey: #999;
+
+.sticky {
+    position: fixed;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+.container-fluid {
+    padding: 0px;
+    margin: 0px;
+}
+
+.container {
+    padding: 0px;
+    margin: 0px;
+}
+
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+}
+
+@media screen and (min-width: 1680px) {
+    .wd-detail-box .details .details-nav {
+        margin-top: 55%;
+    }
+}
+
+@media screena and (min-width:1550px) {
+        .wd-detail-box .details .details-nav {
+        margin-top: 320px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .prompt-row {
+        margin-top: 6%;
+        .prompt-box {
+            height: 450px;
+        }
+    }
+}
+
+@media screen and (max-width: 1030px) {
+    #side-nav {
+        display: none;
+    }
+    .creative-nav {
+        display: none;
+    }
+    .mobile-nav-holder {
+        width: 100%;
+        min-height: 100px;
+        border-bottom: 2px solid $dark-grey;
+        border-top: 2px solid $dark-grey;
+        background-color: rgba(241, 236, 248, 0.8);
+        z-index: 500;
+        box-shadow: 3px 0px 5px #999;
+        display: none;
+
+        @supports ( (-webkit-backdrop-filter: blur(5px)) or (backdrop-filter: blur(5px))) {
+            .mobile-nav-holder {
+                background-color: rgba(241, 236, 248, 0.8);
+                backdrop-filter: blur(5px);
+                -webkit-backdrop-filter: blur(5px);
+            }
+        }
+
+        .mobile-nav-toggle {
+            position: absolute;
+            display: inline-block;
+            top: 27px;
+            right: 15px;
+            font-size: 35px;
+            color: $dark-grey;
+        }
+        .mobile-nav {
+            position: relative;
+            right: 15px;
+            top: 60px;
+            list-style: none;
+            margin-bottom: 55px;
+            .creative-nav-mobile {
+                list-style: none;
+                display: none;
+            }
+            li {
+                font-size: 20px;
+                padding: 12px 0px;
+                text-align: right;
+                font-weight: 500;
+                a {
+                    color: #222;
+                }
+                a:active {
+                    color: $dark-grey;
+                    text-decoration: none;
+                }
+                a:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .overlay-text {
+        font-weight: 300;
+    }
+
+    #web-dev,
+    #content {
+        min-height: 590px;
+        .wd-detail-box {
+            height: auto;
+            .description {
+                height: auto;
+                left: 50%;
+                transform: translate(-50%);
+                border-bottom: 0px;
+                border-right: 2px solid #7faef9;
+                width: 60%;
+                position: relative;
+                margin-top: 25px;
+            }
+            .details {
+                position: relative;
+                top: 12%;
+                border-top: 0px;
+                border-left: 2px solid #7faef9;
+                width: 60%;
+                left: 50%;
+                transform: translate(-50%);
+                margin-bottom: 25px;
+                .details-inner {
+                    width: 80%;
+                    text-align: left;
+                    right: auto;
+                    ul {
+                        flex-wrap: wrap;
+                        padding-left: 0px;
+                        font-weight: 400;
+                    }
+                    .details-txt {
+                        padding-left: 0px;
+                        font-weight: 400;
+                    }
+                }
+                .details-nav {
+                    margin-top: 0px;
+                    position: absolute;
+                    bottom: 78px;
+                    left: 50%;
+                    transform: translate(-50%);
+                    width: 100%;
+                }
+                h5 {
+                    position: absolute;
+                    width: 80%;
+                    bottom: 10px;
+                    left: 50%;
+                    transform: translate(-50%);
+                }
+            }
+        }
+    }
+    #content {
+        position: relative;
+        .prompt-row {
+            margin-top: 6%;
+            margin-left: 15%;
+            width: 80%;
+            position: relative;
+            .prompt-box {
+                height: 200px;
+                width: 85%;
+                margin-bottom: 6%;
+                .f-icon {
+                    width: 25%;
+                }
+            }
+        }
+    }
+    #resume {
+        .pic {
+            width: 50%;
+            margin: 20px auto;
+        }
+        .tech,
+        .exp {
+            text-align: center;
+            padding: 0px 15%;
+            border: 0px;
+            .tech-content {
+                padding: 0px;
+            }
+        }
+    }
+    footer {
+        .cat {
+            background-image: url("../assets/sunny-bw-md.jpg");
+            background-color: transparent;
+        }
+        .overlay-cat {
+            display: block;
+            opacity: 0.8;
+        }
+    }
+}
+
+@media screen and (max-width: 770px) {
+    #nav-top {
+        display: none;
+    }
+
+    #greeting {
+        font-size: 45px;
+    }
+
+    h2 {
+        font-size: 63px;
+    }
+
+    .overlay-text {
+        font-size: 45px;
+        .overlay-subhed {
+            font-size: 20px;
+        }
+    }
+
+    #web-dev,
+    #content {
+        .wd-detail-box {
+            .description {
+                font-size: 28px;
+                width: 90%;
+                margin-top: 55px;
+            }
+            .details {
+                width: 90%;
+                .details-inner {
+                    h4 {
+                        font-size: 25px;
+                    }
+                    .details-txt {
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+    }
+    
+    #wd-content-box-pj {
+        @include wd-content-box("../assets/pj-sm.jpg");
+    }
+
+    #wd-content-box-lg {
+        @include wd-content-box("../assets/legend-shot-sm.jpg");
+    }
+    
+    #wd-content-box-lh {
+        @include wd-content-box("../assets/lh-sm.jpg");
+    }
+
+    #wd-content-box-pl {
+        @include wd-content-box("../assets/pl-sm.jpg");
+    }
+
+    #wd-content-box-sm {
+        @include wd-content-box("../assets/sl-sm.jpg");
+    }
+
+    #wd-content-box-gg {
+        @include wd-content-box("../assets/gg-sm.jpg");
+    }
+
+    #wd-content-box-oc {
+        @include wd-content-box("../assets/oc-sm.jpg");
+    }
+
+    #wd-content-box-no {
+        @include wd-content-box("../assets/no-sm.jpg");
+    }
+
+    #wd-content-box-el {
+        @include wd-content-box("../assets/el-sm.jpg");
+    }
+
+    .mobile-nav-holder {
+        min-height: 70px;
+        .mobile-nav-toggle {
+            top: 17px;
+        }
+        .mobile-nav {
+            height: 100vh;
+        }
+    }
+    .tech,
+    .exp {
+        h5 {
+            font-size: 40px;
+            font-weight: bold;
+        }
+    }
+    .tech {
+        h6 {
+            font-size: 35px;
+        }
+    }
+    .exp {
+        h6 {
+            font-size: 25px;
+        }
+    }
+
+    #resume .pic {
+        width: 85%;
+    }
+
+    .social-icons li {
+        font-size: 75px;
+    }
+
+    .overlay-cat {
+        .overlay-cat-txt a {
+            font-size: 30px;
+        }
+        .cat-footer {
+            font-weight: bolder;
+        }
+    }
+
+    footer .cat {
+        background-image: url("../assets/sunny-bw-sm.jpg");
+        height: 350px;
+        background-position-x: -150px;
+        background-attachment: scroll;
+    }
+
+}
+
+@media screen and (max-width: 375px) {
+    h2 {
+        font-size: 50px;
+    }
+    .overlay-cat .overlay-cat-txt a {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 770px) and (orientation: landscape) {
+    .mobile-nav-holder {
+        .mobile-nav {
+            li {
+                text-align: right;
+                font-size: 22px;
+                padding: 5px 0px;
+            }
+        }
+    }
+    .wd-detail-box .details {
+        height: 370px;
+    }
+    footer .cat {
+        background-position-x: 0px;
+    }
+}
+
+@media screen and (max-width: 570px) and (orientation: landscape) {
+
+    #down-arrow {
+        bottom: 25px;
+        i {
+            font-size: 40px;
+        }
+    }
+    .mobile-nav-holder {
+        .mobile-nav {
+            li {
+                text-align: right;
+                font-size: 18px;
+                padding: 5px 0px;
+                font-weight: 400;
+            }
+        }
+    }
+}
