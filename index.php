@@ -6,19 +6,13 @@
 
 <head>
     <title>shane's little internet home</title>
-    <!-- Global Site Tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107329938-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments)
-        };
-        gtag('js', new Date());
-
-        gtag('config', 'UA-107329938-1');
-
-    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KMCXG9Q');</script>
+    <!-- End Google Tag Manager -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="description" content="A website highlighting the web development and creative work of Shane Danaher. Stop in, say hi.">
     <meta name="keywords" content="web development,design,coding,websites,web dev">
@@ -39,6 +33,10 @@
 </head>
 
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMCXG9Q"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <div id="greeting-meta-container" class="chunk" data-background="#F1ECF8">
 
         <!--        Navigation-->
@@ -53,7 +51,7 @@
                 </ul>
             </div>
 
-            <!--            Side nav-->
+            <!--            Pizza nav-->
             <ul class="creative-navi w-navi">
                 <li id="w-trigger"><span class="creative-nav side-nav-heading" id="side-nav-w">writing</span>&nbsp;&nbsp;<object class="f-icon" type="image/svg+xml" data="assets/feather.svg">Your browser does not support SVGs</object>
                 </li>
@@ -110,7 +108,49 @@
         <div id="web-dev" class="chunk port-sec" data-background="#A18FA1">
             <h2>Web Development</h2>
             
-    <!--            Postcards From Anywhere-->
+    <!--            The Endless Hunt  -->
+    <div class="wd-content-holder">
+                <div class="overlay-text" id="lg-overlay-txt">Endless Hunt</div>
+                <div class="wd-content-box blur" id="wd-content-box-eh">
+                    <div class="site-thumb">
+                        <div class="overlay">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="wd-detail-box row" id="detail-box-bf">
+                    <div class="close" id="test"><i class="fa fa-times" aria-hidden="true"></i></div>
+                    <div class="description col-lg-push-2 col-lg-4">
+                        A web application for managing your neverending job hunt
+                    </div>
+                    <div class="details col-lg-4 col-lg-push-6">
+                        <div class="details-inner d-1">
+                            <h4>Technologies used</h4>
+                            <ul>
+                                <li>ReactJS</li>
+                                <li>Redux</li>
+                                <li>SCSS</li>
+                                <li>D3.js</li>
+                                <li>Firebase</li>
+                            </ul>
+                        </div>
+                        <div class="details-inner d-2">
+                            <h4>Details</h4>
+                            <div class="details-txt">
+                                This web application allows users to keep track of the jobs they've applied to, easily access information about their job hunt, and view graphical insights about their search.
+                            </div>
+                        </div>
+                        <div class="details-nav">
+                            <i class="fa fa-chevron-left l" aria-hidden="true"></i>
+                            <i class="fa fa-chevron-right switch r" aria-hidden="true"></i>
+                        </div>
+                        <h5><a href="https://endlesshunting.com/" target="_blank">Visit the site</a></h5>
+                    </div>
+                </div>
+            </div>
+
+<!--            Postcards From Anywhere-->
             <div class="wd-content-holder">
                 <div class="overlay-text" id="lg-overlay-txt">Postcards</div>
                 <div class="wd-content-box blur" id="wd-content-box-pc">
@@ -151,10 +191,10 @@
                 </div>
             </div>
             
-            <!--            Holiday gift guide-->
+            <!--            GTM Super-Saver -->
                        <div class="wd-content-holder">
-                <div class="overlay-text" id="lg-overlay-txt">Book Finder</div>
-                <div class="wd-content-box blur" id="wd-content-box-bf">
+                <div class="overlay-text" id="lg-overlay-txt">GTM Super-Saver</div>
+                <div class="wd-content-box blur" id="wd-content-box-gtm">
                     <div class="site-thumb">
                         <div class="overlay">
                         </div>
@@ -165,7 +205,7 @@
                 <div class="wd-detail-box row" id="detail-box-bf">
                     <div class="close" id="test"><i class="fa fa-times" aria-hidden="true"></i></div>
                     <div class="description col-lg-push-2 col-lg-4">
-                        This single-page application allows users to shop for books according to the intended recipient
+                        A modest Google Chrome extension that helps streamline the Google Tag Manager workflow
                     </div>
                     <div class="details col-lg-4 col-lg-push-6">
                         <div class="details-inner d-1">
@@ -173,24 +213,21 @@
                             <ul>
                                 <li>HTML5</li>
                                 <li>CSS3</li>
-                                <li>PHP</li>
-                                <li>jQuery</li>
-                                <li>Ajax</li>
-                                <li>Wordpress</li>
-                                <li>REST APIs</li>
+                                <li>Javascript</li>
+                                <li>Google Chrome APIs</li>
                             </ul>
                         </div>
                         <div class="details-inner d-2">
                             <h4>Details</h4>
                             <div class="details-txt">
-                                In this project, I used user inputs to populate the book finder with the appropriate titles via an Ajax call to WordPress's REST API.
+                                This Google Chrome extension abstracts the process of saving and refreshing your preview pages while working in Google Tag Manager.
                             </div>
                         </div>
                         <div class="details-nav">
                             <i class="fa fa-chevron-left l" aria-hidden="true"></i>
                             <i class="fa fa-chevron-right switch r" aria-hidden="true"></i>
                         </div>
-                        <h5><a href="https://www.rodalebooks.com/book_guide/book-finder/" target="_blank">Visit the site</a></h5>
+                        <h5><a href="https://chrome.google.com/webstore/detail/google-tag-manager-super/efhghemneglmmmlpjbcgidngpkhckbim?hl=en" target="_blank">Visit the site</a></h5>
                     </div>
                 </div>
             </div>
@@ -237,50 +274,6 @@
                             <i class="fa fa-chevron-right switch r" aria-hidden="true"></i>
                         </div>
                         <h5><a href="http://citytechcedev.org/fssa/sdanaher/landing.php" target="_blank">Visit the site</a></h5>
-                    </div>
-                </div>
-            </div>
-
-<!--            Legend has it-->
-            <div class="wd-content-holder">
-                <div class="overlay-text" id="lg-overlay-txt">Legend Has It</div>
-                <div class="wd-content-box blur" id="wd-content-box-lg">
-                    <div class="site-thumb">
-                        <div class="overlay">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container-fluid">
-                <div class="wd-detail-box row" id="detail-box-lg">
-                    <div class="close" id="test"><i class="fa fa-times" aria-hidden="true"></i></div>
-                    <div class="description col-lg-push-2 col-lg-4">
-                        A personal blog and portfolio for writer and journalist Ray Legendre
-                    </div>
-                    <div class="details col-lg-4 col-lg-push-6">
-                        <div class="details-inner d-1">
-                            <h4>Technologies used</h4>
-                            <ul>
-                                <li>HTML5</li>
-                                <li>CSS3</li>
-                                <li>PHP</li>
-                                <li>JQuery</li>
-                                <li>Bootstrap</li>
-                                <li>Sass</li>
-                                <li>MySQL</li>
-                            </ul>
-                        </div>
-                        <div class="details-inner d-2">
-                            <h4>Details</h4>
-                            <div class="details-txt">
-                                For this project, I customized an existing WordPress theme to provide additional features and a visual style consistent with the client's brand.
-                            </div>
-                        </div>
-                        <div class="details-nav">
-                            <i class="fa fa-chevron-left l" aria-hidden="true"></i>
-                            <i class="fa fa-chevron-right switch r" aria-hidden="true"></i>
-                        </div>
-                        <h5><a href="http://www.legendhasit.us/" target="_blank">Visit the site</a></h5>
                     </div>
                 </div>
             </div>
@@ -633,43 +626,50 @@
                     <div class="col-lg-4 col-lg-push-2 tech">
                     <h5>Technologies</h5>
                         <ul class="tech-content">
+                            <li>ReactJS</li>
+                            <li>VueJS</li>
+                            <li>Node.js</li>
+                            <li>JavaScript (ES6+)</li>
                             <li>HTML5</li>
                             <li>CSS3</li>
                             <li>PHP7</li>
-                            <li>JavaScript</li>
-                            <li>ReactJS</li>
-                            <li>VueJS</li>
                             <li>SASS</li>
-                            <li>REST APIs</li>
                             <li>jQuery</li>
-                            <li>Ajax</li>
-                            <li>JSON</li>
                             <li>MySQL</li>
                         </ul>
                         <h6>Tools and environments</h6>
                         <ul class="tech-content">
                             <li>WordPress</li>
                             <li>Bootstrap</li>
-                            <li>WebPack</li>
+                            <li>WebPack/NPM</li>
                             <li>Adobe Creative Suite</li>
                             <li>GitHub</li>
                             <li>GitBash</li>
                             <li>Google Analytics</li>
+                            <li>Google Tag Manager</li>
                         </ul>
                     </div>
                     <div class="col-lg-4 col-lg-push-2 exp">
                         <h5>Experience</h5>
+                        <h6><a href="https://3qdigital.com/" target="_blank">3Q Digital</a></h6>
+                        <div class="exp-summary">I build web applications and provide marketing technology support for multiple clients in my work for this stellar digital marketing agency.</div>
+                        <div class="exp-tech">VueJS, ReactJS, Node.js, Javascript, Google Tag Manager, CSS, HTML</div>
+
+                        <h6><a href="https://816nyc.com/" target="_blank">816 New York</a></h6>
+                        <div class="exp-summary">For this fine digital marketing agency, I helped build and maintain a variety of Wordpress-based websites.</div>
+                        <div class="exp-tech">Wordpress, PHP, Javascript, CSS, HTML</div>
+                        
+                        <h6><a href="https://upchieve.org/" target="_blank">UPchieve</a></h6>
+                        <div class="exp-summary">I contributed development work to this on-demand web tutoring application on a volunteer basis.</div>
+                        <div class="exp-tech">VueJS, Node.js, Javascript, CSS, HTML</div>
+                        
                         <h6><a href="https://www.rodalebooks.com/" target="_blank">Rodale Press</a></h6>
-                        <div class="exp-summary">At Rodale, a publishing house specializing in health and wellness titles, I manage and do development work on the company's b-to-b sales website.</div>
+                        <div class="exp-summary">At Rodale, a publishing house specializing in health and wellness titles, I performed development work on the company's b-to-b sales website.</div>
                         <div class="exp-tech">WordPress, CSS, PHP, HTML, Adobe Creative Suite</div>
 
                         <h6><a href="https://rxart.net/" target="_blank">Rx Art</a></h6>
-                        <div class="exp-summary">I volunteered at Rx Art, an arts nonprofit that places artworks in children's hospitals, to make several modifications to their WordPress-based web presence.</div>
+                        <div class="exp-summary">I volunteered at Rx Art, an arts nonprofit that places artworks in children's hospitals, to make several modifications to their Wordpress-based web presence.</div>
                         <div class="exp-tech">WordPress, CSS, PHP, HTML, JavaScript</div>
-
-                        <h6><a href="https://coconuts.co/bangkok/" target="_blank">Coconuts Bangkok</a></h6>
-                        <div class="exp-summary">I worked as an editor and content creator for this digital media company.</div>
-                        <div class="exp-tech">Drupal, CSS, HTML</div>
 
 
                     </div>

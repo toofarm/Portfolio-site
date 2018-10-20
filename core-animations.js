@@ -282,7 +282,7 @@ $(document).ready(function () {
         var scrollTop = $(window).scrollTop();
 
 
-        if (w < 1300) {
+        if (w < 1024) {
 
             if (scrollTop > stickyNavTop) {
                 $('.mobile-nav-holder').css({
