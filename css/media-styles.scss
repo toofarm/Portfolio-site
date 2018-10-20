@@ -70,7 +70,7 @@ $dark-grey: #999;
     }
 }
 
-@media screen and (max-width: 1030px) {
+@media screen and (max-width: 1024px) {
     #side-nav {
         display: none;
     }
@@ -88,7 +88,7 @@ $dark-grey: #999;
         display: none;
 
         @supports ( (-webkit-backdrop-filter: blur(5px)) or (backdrop-filter: blur(5px))) {
-            .mobile-nav-holder {
+            .mobile-nav-holder { 
                 background-color: rgba(241, 236, 248, 0.8);
                 backdrop-filter: blur(5px);
                 -webkit-backdrop-filter: blur(5px);

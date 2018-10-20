@@ -304,7 +304,7 @@ h3 {
         position: absolute;
         bottom: 10px;
         left: 10px;
-        font-size: 270px;
+        font-size: 200px; 
         display: none;
     }
     #brackets {
@@ -353,16 +353,16 @@ h3 {
     @include wd-content-box("../assets/pj.jpg");
 }
 
-#wd-content-box-lg {
-    @include wd-content-box("../assets/legend-shot.jpg");
-}
-
-#wd-content-box-bf {
-    @include wd-content-box("../assets/bf.jpg");
+#wd-content-box-eh {
+    @include wd-content-box("../assets/eh.jpg");
 }
 
 #wd-content-box-pc {
     @include wd-content-box("../assets/pc.jpg");
+}
+
+#wd-content-box-gtm {
+    @include wd-content-box("../assets/gtm.jpg");
 }
 
 .wd-content-box {
