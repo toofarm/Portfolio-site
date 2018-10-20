@@ -65,7 +65,7 @@ $(document).ready(function () {
         var target = this.hash;
         var $target = $(target);
 
-        if (w > 1300) {
+        if (w > 1024) {
 
             $('html, body').stop().animate({
                 'scrollTop': $target.offset().top
@@ -73,22 +73,57 @@ $(document).ready(function () {
                 window.location.hash = target;
             });
 
-        } else if ( w > 770) {
+        } else if (w > 770) {
 
-            $('html, body').stop().animate({
-                'scrollTop': $target.offset().top - 100
-            }, 900, 'swing', function () {
-                window.location.hash = target;
-            });
+            if ($(this).attr("href") == ("#web-dev")) {
 
+                $('html, body').stop().animate({
+                    'scrollTop':
+
+                        $target.offset().top
+
+                }, 900, 'swing', function () {
+                    window.location.hash = target;
+                });
+
+            } else {
+
+                $('html, body').stop().animate({
+                    'scrollTop':
+
+                        $target.offset().top - 100
+
+                }, 900, 'swing', function () {
+                    window.location.hash = target;
+                });
+
+            }
+            
         } else {
-            
-            $('html, body').stop().animate({
-                'scrollTop': $target.offset().top - 70
-            }, 900, 'swing', function () {
-                window.location.hash = target;
-            });
-            
+
+            if ($(this).attr("href") == ("#web-dev")) {
+
+                $('html, body').stop().animate({
+                    'scrollTop':
+
+                        $target.offset().top
+
+                }, 900, 'swing', function () {
+                    window.location.hash = target;
+                });
+
+            } else {
+
+                $('html, body').stop().animate({
+                    'scrollTop':
+
+                        $target.offset().top - 70
+
+                }, 900, 'swing', function () {
+                    window.location.hash = target;
+                });
+
+            }
         }
     });
 
@@ -238,7 +273,7 @@ $(document).ready(function () {
         $(".mobile-nav-toggle").trigger("click");
     });
 
-    //    Make mobile nav sticky
+    //    Makes mobile nav sticky
 
     var stickyNavTop = $('#web-dev').offset().top;
 
@@ -247,19 +282,17 @@ $(document).ready(function () {
         var scrollTop = $(window).scrollTop();
 
 
-        if (w < 1300) {
-            
-            console.log("reveal function trigger");
-    
-        if (scrollTop > stickyNavTop) {
-            $('.mobile-nav-holder').css({
-                "position": "fixed",
-                "top": "0px",
-                "display": "block"
-            });
-        } else {
-            $('.mobile-nav-holder').css("display", "none");
-        }
+        if (w < 1024) {
+
+            if (scrollTop > stickyNavTop) {
+                $('.mobile-nav-holder').css({
+                    "position": "fixed",
+                    "top": "0px",
+                    "display": "block"
+                });
+            } else {
+                $('.mobile-nav-holder').css("display", "none");
+            }
         }
     };
 
@@ -308,6 +341,8 @@ $(document).ready(function () {
 
 
     //  Portfolio hover reveal
+    
+    if (w > 1020) {
 
     $(".overlay-text").mouseenter(function () {
         $(this).next().stop(true, true).fadeIn(1000);
@@ -318,8 +353,10 @@ $(document).ready(function () {
             $(this).next().stop(true, true).fadeOut(1000);
         }
     });
+    
+    }
 
-    //    Portfolio details reveal
+    //    Portfolio item details reveal
     $(".overlay-text").click(function () {
         if ($(this).parent().next().children("div.wd-detail-box").css("display") === "none") {
 
@@ -328,6 +365,12 @@ $(document).ready(function () {
             $('html, body').animate({
                 scrollTop: $(this).parent().offset().top
             }, 700);
+            
+            if ( w < 1021) {
+                
+                $(this).next().stop(true, true).fadeIn(1000);
+
+            }
             $(this).parent().next().children("div.wd-detail-box").slideDown(700);
 
             $({
@@ -375,11 +418,9 @@ $(document).ready(function () {
     $(".close").click(function () {
         $(this).parent().slideUp(700);
 
-        $(this).parents(".wd-detail-box").parent().siblings(".wd-content-holder").find(".wd-content-box").fadeOut(1000);
+        $(this).parent().parent().prev().find(".wd-content-box").fadeOut(1000);
 
         var id = $(this).parents(".wd-detail-box").parent().prevUntil("wd-content-holder").children("div.wd-content-box").attr("id");
-
-        console.log(id);
 
         $({
             blurRadius: 0
@@ -389,7 +430,6 @@ $(document).ready(function () {
             duration: 700,
             easing: 'linear',
             step: function () {
-                console.log(this.blurRadius + "Working");
                 $("#" + id + "").css({
                     "-webkit-filter": "blur(" + this.blurRadius + "px)",
                     "filter": "blur(" + this.blurRadius + "px)"
